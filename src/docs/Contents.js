@@ -62,20 +62,26 @@ import DistributionExamplesDoc from
 import FooterDoc from './components/FooterDoc';
 import FormDoc from './components/form/FormDoc';
 import FormExamplesDoc from './components/form/FormExamplesDoc';
-import FormFieldDoc from './components/FormFieldDoc';
-import HeaderDoc from './components/HeaderDoc';
+import FormFieldDoc from './components/form-field/FormFieldDoc';
+import FormFieldExamplesDoc from './components/form-field/FormFieldExamplesDoc';
+import HeaderDoc from './components/header/HeaderDoc';
+import HeaderExamplesDoc from './components/header/HeaderExamplesDoc';
 import HeadingDoc from './components/HeadingDoc';
 import HeadlineDoc from './components/headline/HeadlineDoc';
 import HeadlineExamplesDoc from './components/headline/HeadlineExamplesDoc';
-import HeroDoc from './components/HeroDoc';
+import HeroDoc from './components/hero/HeroDoc';
+import HeroExamplesDoc from './components/hero/HeroExamplesDoc';
 import IconDoc from './components/IconDoc';
 import ImageDoc from './components/image/ImageDoc';
 import ImageExamplesDoc from './components/image/ImageExamplesDoc';
 import LabelDoc from './components/LabelDoc';
-import LayerDoc from './components/LayerDoc';
+import LayerDoc from './components/layer/LayerDoc';
+import LayerExamplesDoc from './components/layer/examples/LayerExamplesDoc';
 import LegendDoc from './components/LegendDoc';
-import ListDoc from './components/ListDoc';
-import LoginFormDoc from './components/LoginFormDoc';
+import ListDoc from './components/list/ListDoc';
+import ListExamplesDoc from './components/list/ListExamplesDoc';
+import LoginFormDoc from './components/login-form/LoginFormDoc';
+import LoginFormExamplesDoc from './components/login-form/LoginFormExamplesDoc';
 import MapDoc from './components/map/MapDoc';
 import MapExamplesDoc from './components/map/MapExamplesDoc';
 import MarkdownDoc from './components/markdown/MarkdownDoc';
@@ -97,8 +103,11 @@ import QuoteExamplesDoc from './components/quote/QuoteExamplesDoc';
 import RadioButtonDoc from './components/RadioButtonDoc';
 import RestDoc from './utils/RestDoc';
 import RestWatchDoc from './utils/RestWatchDoc';
-import SearchDoc from './components/SearchDoc';
-import SearchInputDoc from './components/SearchInputDoc';
+import SearchDoc from './components/search/SearchDoc';
+import SearchExamplesDoc from './components/search/SearchExamplesDoc';
+import SearchInputDoc from './components/search-input/SearchInputDoc';
+import SearchInputExamplesDoc from
+  './components/search-input/SearchInputExamplesDoc';
 import SectionDoc from './components/SectionDoc';
 import SidebarDoc from './components/SidebarDoc';
 import SocialShareDoc from './components/social-share/SocialShareDoc';
@@ -111,7 +120,7 @@ import SunBurstDoc from './components/SunBurstDoc';
 import TableDoc from './components/table/TableDoc';
 import TableExamplesDoc from './components/table/TableExamplesDoc';
 import TabsDoc from './components/TabsDoc';
-import TagsDoc from './components/TagsDoc';
+import TextInputDoc from './components/TextInputDoc';
 import TilesDoc from './components/tiles/TilesDoc';
 import TilesExamplesDoc from './components/tiles/examples/TilesExamplesDoc';
 import TimestampDoc from './components/TimestampDoc';
@@ -208,22 +217,34 @@ export default [
       {path: 'form', label: 'Form', index: FormDoc, contents: [
         {path: 'examples', component: FormExamplesDoc}
       ]},
-      {path: 'form-field', label: 'FormField', component: FormFieldDoc},
-      {path: 'header', label: 'Header', component: HeaderDoc},
+      {path: 'form-field', label: 'FormField', index: FormFieldDoc, contents: [
+        {path: 'examples', component: FormFieldExamplesDoc}
+      ]},
+      {path: 'header', label: 'Header', index: HeaderDoc, contents: [
+        {path: 'examples', component: HeaderExamplesDoc}
+      ]},
       {path: 'heading', label: 'Heading', component: HeadingDoc},
       {path: 'headline', label: 'Headline', index: HeadlineDoc, contents: [
         {path: 'examples', component: HeadlineExamplesDoc}
       ]},
-      {path: 'hero', label: 'Hero', component: HeroDoc},
+      {path: 'hero', label: 'Hero', index: HeroDoc, contents: [
+        {path: 'examples', component: HeroExamplesDoc}
+      ]},
       {path: 'icon', label: 'Icon', component: IconDoc},
       {path: 'image', label: 'Image', index: ImageDoc, contents: [
         {path: 'examples', component: ImageExamplesDoc}
       ]},
       {path: 'label', label: 'Label', component: LabelDoc},
-      {path: 'layer', label: 'Layer', component: LayerDoc},
+      {path: 'layer', label: 'Layer', index: LayerDoc, contents: [
+        {path: 'examples', component: LayerExamplesDoc}
+      ]},
       {path: 'legend', label: 'Legend', component: LegendDoc},
-      {path: 'list', label: 'List', component: ListDoc},
-      {path: 'login-form', label: 'LoginForm', component: LoginFormDoc},
+      {path: 'list', label: 'List', index: ListDoc, contents: [
+        {path: 'examples', component: ListExamplesDoc}
+      ]},
+      {path: 'login-form', label: 'LoginForm', index: LoginFormDoc, contents: [
+        {path: 'examples', component: LoginFormExamplesDoc}
+      ]},
       {path: 'map', label: 'Map', index: MapDoc, contents: [
         {path: 'examples', component: MapExamplesDoc}
       ]},
@@ -249,8 +270,13 @@ export default [
         {path: 'examples', component: QuoteExamplesDoc}
       ]},
       {path: 'radio-button', label: 'RadioButton', component: RadioButtonDoc},
-      {path: 'search', label: 'Search', component: SearchDoc},
-      {path: 'search-input', label: 'SearchInput', component: SearchInputDoc},
+      {path: 'search', label: 'Search', index: SearchDoc, contents: [
+        {path: 'examples', component: SearchExamplesDoc}
+      ]},
+      {path: 'search-input', label: 'SearchInput', index: SearchInputDoc,
+        contents: [
+          {path: 'examples', component: SearchInputExamplesDoc}
+        ]},
       {path: 'section', label: 'Section', component: SectionDoc},
       {path: 'sidebar', label: 'Sidebar', component: SidebarDoc},
       {path: 'social-share', label: 'SocialShare', index: SocialShareDoc,
@@ -265,7 +291,7 @@ export default [
         {path: 'examples', component: TableExamplesDoc}
       ]},
       {path: 'tabs', label: 'Tabs', index: TabsDoc},
-      {path: 'tags', label: 'Tags', component: TagsDoc},
+      {path: 'text-input', label: 'TextInput', component: TextInputDoc},
       {path: 'tiles', label: 'Tiles', index: TilesDoc, contents: [
         {path: 'examples', component: TilesExamplesDoc}
       ]},
