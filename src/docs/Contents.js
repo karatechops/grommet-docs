@@ -95,8 +95,10 @@ import NotificationDoc from './components/notification/NotificationDoc';
 import NotificationExamplesDoc from
   './components/notification/NotificationExamplesDoc';
 import NumberInputDoc from './components/NumberInputDoc';
+import PatternsOverview from './patterns/PatternsOverview';
 import ParagraphDoc from './components/paragraph/ParagraphDoc';
 import ParagraphExamplesDoc from './components/paragraph/ParagraphExamplesDoc';
+import PrimaryPage from './patterns/PrimaryPage';
 import PulseDoc from './components/PulseDoc';
 import QuoteDoc from './components/quote/QuoteDoc';
 import QuoteExamplesDoc from './components/quote/QuoteExamplesDoc';
@@ -163,7 +165,21 @@ export default [
     ]},
   {label: 'Patterns',
     contents: [
-      {path: 'navigation', label: 'Navigation', component: NavigationDoc}
+      //{path: 'navigation', label: 'Navigation', component: NavigationDoc},
+      {path: 'patterns-overview', label: 'Patterns Overview', 
+        component: PatternsOverview},
+      {path: 'primary-page', label: 'Primary Page', component: PrimaryPage},
+      {path: 'sub-page', label: 'Sub Page', component: NavigationDoc},
+      {path: 'detail-page', label: 'Detail Page', component: NavigationDoc},
+      {path: 'feed-page', label: 'Feed Page', component: NavigationDoc},
+      {path: 'vertical-narrative', label: 'Vertical Narrative', 
+        component: NavigationDoc},
+      {path: 'horizontal-narrative', label: 'Horizontal Narrative', 
+        component: NavigationDoc},
+      {path: 'single-page-narrative', label: 'Single page Narrative', 
+        component: NavigationDoc},
+      {path: 'split-pane', label: 'Split Pane', component: NavigationDoc},
+      {path: 'forms', label: 'Forms', component: NavigationDoc}
     ]
   },
   {label: 'Components',
