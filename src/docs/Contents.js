@@ -163,9 +163,9 @@ export default [
       {path: 'capitalization', label: 'Capitalization',
         component: Capitalization}
     ]},
-  {label: 'Patterns',
+  {label: 'Patterns', path: 'patterns', component: PatternsOverview, 
     contents: [
-      //{path: 'navigation', label: 'Navigation', component: NavigationDoc},
+      {path: 'navigation', label: 'Navigation', component: NavigationDoc},
       {path: 'patterns-overview', label: 'Patterns Overview', 
         component: PatternsOverview},
       {path: 'primary-page', label: 'Primary Page', component: PrimaryPage},
