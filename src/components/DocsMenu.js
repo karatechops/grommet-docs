@@ -15,26 +15,22 @@ export default class DocsMenu extends Component {
     return contents.filter(content => content.label).map((content, index) => {
       let item;
 
-      // Check the first key in the object, if it matches the label
-      // it's a section title with a link.
-      if (content[Object.keys(content)[0]] === content.label && content.path) {
-        item = (
-          <Box key={content.label} pad={{horizontal: 'medium'}}>
-            <Heading tag="h3" strong={true}>
-              <NavAnchor key={content.label} path={`/docs/${content.path}`}
-                onClick={this.props.onClick}>
-                {content.label}
-              </NavAnchor>
-            </Heading>
-          </Box>
-        );
-      } else if (content.path) {
+      if (content.path) {
         item = (
           <NavAnchor key={content.label} path={`/docs/${content.path}`}
             onClick={this.props.onClick}>
             {content.label}
           </NavAnchor>
         );
+        if (content[Object.keys(content)[0]] === content.label) {
+          item = (
+            <Box key={content.label} pad={{horizontal: 'medium'}}>
+              <Heading tag="h3" strong={true}>
+                {item}
+              </Heading>
+            </Box>
+          );
+        }
       } else {
         item = (
           <Box key={content.label} pad={{horizontal: 'medium'}}>
